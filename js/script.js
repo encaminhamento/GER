@@ -1,8 +1,9 @@
 function formatar() {
     var encaminhamento = document.getElementById("primeiro").value;
     var importante = document.getElementById("ponto").value;
-    if (encaminhamento === "" & importante === "") {
-        popup("Impossivel fazer formatação sem texto");
+    var ReuniaoData = document.getElementById("data").value;
+    if (encaminhamento === "" & importante === "" | ReuniaoData === "") {
+        popup("Impossivel fazer formatação sem encaminhamentos ou Informações");
     }
     else {
         document.getElementById("segundo").value = "";
@@ -13,15 +14,15 @@ function formatar() {
         var teste = document.querySelector('input[name="inlineRadioOptions"]:checked').value;
 
         if (teste === "1") {
-            document.getElementById("segundo").value += "*Ponto de Controle " + document.getElementById("data").value + "*";
+            document.getElementById("segundo").value += "*Ponto de Controle " + document.getElementById("data").value + "*\n";
         }
         else {
-            document.getElementById("segundo").value += "*Reunião " + document.getElementById("data").value + "*";
+            document.getElementById("segundo").value += "*Reunião " + document.getElementById("data").value + "*\n";
         }
 
         if (encaminhamento !== "") {
 
-            document.getElementById("segundo").value += "\n\n*Encaminhamentos*\n";
+            document.getElementById("segundo").value += "\n*Encaminhamentos:*\n";
             for (var i = 0; i < tamanho; i++) {
                 var aux = vetorString[i];
                 var tamanhoAux = aux.length;
@@ -93,13 +94,9 @@ function popup(texto) {
 }
 
 function copiar() {
-    const textInput = document.getElementById('segundo');
-    const copyButton = document.getElementById('botao');
-
-    copyButton.addEventListener('click', () => {
-        textInput.select();
-        document.execCommand('copy');
-    });
+    const texto = document.getElementById('segundo');
+    texto.select();
+    document.execCommand('copy');
 }
 function limpar() {
     document.getElementById("primeiro").value = "";
@@ -133,13 +130,10 @@ function envio() {
 
     var texto = document.getElementById("segundo").value;
     if (texto === "") {
-        popup("Texto vazio");
+        popup("ERRO, 'Texto Formatado' encontra-se em branco");
     }
     else {
-
-
         texto = window.encodeURIComponent(texto);
-
         window.open("https://api.whatsapp.com/send?1=pt_BR&text=" + texto, "_blank");
     }
 
