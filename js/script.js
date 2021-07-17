@@ -11,12 +11,14 @@ function formatar() {
         var tamanho = vetorString.length;
 
         var teste = document.querySelector('input[name="inlineRadioOptions"]:checked').value;
+
         if (teste === "1") {
             document.getElementById("segundo").value += "*Ponto de Controle " + document.getElementById("data").value + "*";
         }
         else {
             document.getElementById("segundo").value += "*Reunião " + document.getElementById("data").value + "*";
         }
+
         if (encaminhamento !== "") {
 
             document.getElementById("segundo").value += "\n\n*Encaminhamentos*\n";
@@ -130,7 +132,18 @@ function envio() {
 
 
     var texto = document.getElementById("segundo").value;
-    texto = window.encodeURIComponent(texto);
+    if (texto === "") {
+        popup("Texto vazio");
+    }
+    else {
 
-    window.open("https://api.whatsapp.com/send?&text=" + texto, "_blank");
+
+        texto = window.encodeURIComponent(texto);
+
+        window.open("https://api.whatsapp.com/send?1=pt_BR&text=" + texto, "_blank");
+    }
+
+
+
+
 }
