@@ -30,49 +30,84 @@
     <div class="container teste">
         <div class="row ">
             <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <div class="row g-2">
+                    <!-- <div class="col-md-6 espacamentoBaixo">
+                        <label>Responsavel pelo Envio: </label>
+                        <input type="text" class="form-control" id="floatingText" placeholder="Responsavel pelo Envio">
+                    </div> -->
+                    <div class="form-floating col-md-8 espacamentoBaixo">
+                        <input class="form-control" type="text" placeholder="Nome" id="floatingInput"></input>
+                        <label for="floatingTextarea2">Responsavel</label>
+                    </div>
+
+                    <div class="col-md-4">
+                        <legend class="col-form-label  pt-0">Ponto de Controle:</legend>
+                        <div class="form-check form-check-inline espacamentoEsq espacamentoPonto">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="1" checked>
+                            <label class="form-check-label" for="inlineRadio1">
+                                Sim
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline espacamentoEsq espacamentoPonto">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="0">
+                            <label class="form-check-label" for="inlineRadio2">
+                                Não
+                            </label>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-7">
+                        <label>Ponto de Controle: </label>
+                        <div class="form-check form-check-inline espacamentoEsq espacamentoPonto">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="1">
+                            <label class="form-check-label" for="inlineRadio1">Sim</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                checked value="0">
+                            <label class="form-check-label" for="inlineRadio2">Não</label>
+                        </div>
+                    </div> -->
+                </div>
                 <div class="row g-2 espacamento">
                     <div class="col-md">
-                        <select onchange="escreve(), datas()" class="form-select  " aria-label=".form-select-sm example"
-                            id="reuniao">
-                            <option value="" selected hidden>--Selecione o Projeto--</option>
-                            <option value="Agricultura do futuro+5G">Agricultura do futuro+5G</option>
-                            <option value="Cidades inteligentes">Cidades inteligentes</option>
-                            <option value="Convênio">Convênio</option>
-                            <option value="Detran">Detran</option>
-                            <option value="ERP">ERP</option>
-                            <option value="Expresso">Expresso</option>
-                            <option value="Gomapp">Gomapp</option>
-                            <option value="Monitora">Monitora</option>
-                            <option value="Musical">Musical</option>
-                            <option value="Orquestra">Orquestra</option>
-                            <option value="Painéis Bi">Painéis Bi</option>
-                            <option value="Reforma basileu">Reforma basileu</option>
-                            <option value="Telas">Telas</option>
-                            <option value="Vacina">Vacina</option>
-                            <option value="Vapt-Vupt">Vapt-Vupt</option>
-                            <option value="Zoox">Zoox</option>
-                            <option value="1">Outra</option>
-                        </select>
+                        <div class="form-floating">
+                            <select onchange="escreve(), datas()" class="form-select  "
+                                aria-label=".form-select-sm example" id="reuniao">
+                                <option value="" selected hidden>--Selecione o Projeto--</option>
+                                <option value="Agricultura do futuro+5G">Agricultura do futuro+5G</option>
+                                <option value="Cidades inteligentes">Cidades inteligentes</option>
+                                <option value="Convênio">Convênio</option>
+                                <option value="Detran">Detran</option>
+                                <option value="ERP">ERP</option>
+                                <option value="Expresso">Expresso</option>
+                                <option value="Gomapp">Gomapp</option>
+                                <option value="Monitora">Monitora</option>
+                                <option value="Musical">Musical</option>
+                                <option value="Orquestra">Orquestra</option>
+                                <option value="Painéis Bi">Painéis Bi</option>
+                                <option value="Reforma basileu">Reforma basileu</option>
+                                <option value="Telas">Telas</option>
+                                <option value="Vacina">Vacina</option>
+                                <option value="Vapt-Vupt">Vapt-Vupt</option>
+                                <option value="Zoox">Zoox</option>
+                                <option value="1">Outra</option>
+                            </select>
+                            <label for="floatingSelectGrid">Projetos</label>
+                        </div>
                     </div>
 
                     <div class="col-md">
-                        <input class="form-control" type="text" aria-label=".form-control-lg example" id="data">
-                        <label for="floatingInputGrid"></label>
+                        <div class="form-floating">
+                            <input class="form-control" type="text" aria-label=".form-control-lg example"
+                                placeholder="Projeto - Data" id="data">
+                            <label for="floatingInputGrid">Projeto - Data</label>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <label>Ponto de Controle: </label>
-                    <div class="form-check form-check-inline espacamentoEsq">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                            value="1">
-                        <label class="form-check-label" for="inlineRadio1">Sim</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" checked
-                            value="0">
-                        <label class="form-check-label" for="inlineRadio2">Não</label>
-                    </div>
-                </div>
+
 
                 <div class="form-floating espacamentoAlto">
                     <textarea class="form-control" placeholder="ENCAMINHAMENTOS. # RESPONSAVEL, DATA" id="primeiro"
