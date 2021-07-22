@@ -1,28 +1,23 @@
 <html>
-
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/main.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″>
     <title>SSG - ENC </title>
 </head>
-
 <body>
-
     <header class="cabecalho">
         <main>
             <div class="p-3 mb-2 bg-success text-white">
-
-                <img src="./img/Logo_SGG.png" class=" img-fluid rounded float-start " alt="...">
+                <img src="./img/sgg-n (1).png" class="img-fluid rounded float-start " alt="...">
                 <!-- <img src="./img/Sem Título-1.png" class="img-fluid rounded float-end" alt="..."> -->
-
                 <figure class="text-center">
                     <blockquote class="blockquote">
                         <h1>Encaminhamento SGG</h1>
                     </blockquote>
                 </figure>
-
             </div>
         </main>
     </header>
@@ -31,14 +26,12 @@
             <div class="row ">
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                     <div class="row g-2">
-
                         <div class="form-floating col-md-4">
                             <select class="form-select  " aria-label=".form-select-sm example" id="gerencia">
                                 <option value="" selected hidden>--Selecione--</option>
                                 <option value="1">GMPG</option>
                                 <option value="2">GMPS</option>
                                 <option value="3">GEMPIDE</option>
-
                             </select>
                             <label for="floatingSelectGrid">Gerencia(*)</label>
                         </div>
@@ -46,7 +39,6 @@
                             <input class="form-control" type="text" placeholder="Nome" id="NomeUsuario"></input>
                             <label for="floatingTextarea2">Digite seu nome(*)</label>
                         </div>
-
                         <div class="col-md-4">
                             <legend class="col-form-label  pt-0">Ponto de Controle:</legend>
                             <div class="form-check form-check-inline espacamentoEsq espacamentoPonto">
@@ -64,7 +56,6 @@
                                 </label>
                             </div>
                         </div>
-
                     </div>
                     <div class="row g-2 espacamento">
                         <div class="col-md">
@@ -94,7 +85,6 @@
                                 <label for="floatingSelectGrid">Projetos</label>
                             </div>
                         </div>
-
                         <div class="col-md">
                             <div class="form-floating">
                                 <input class="form-control" type="text" aria-label=".form-control-lg example"
@@ -103,21 +93,17 @@
                             </div>
                         </div>
                     </div>
-
-
                     <div class="form-floating espacamentoAlto">
                         <textarea class="form-control" placeholder="ENCAMINHAMENTOS. # RESPONSAVEL, DATA" id="primeiro"
                             style="height: 150px"></textarea>
                         <label for="primeiro">Ação#Responsavel#Prazo</label>
                     </div>
-
                     <div class="espacamento form-floating">
                         <textarea class="form-control" placeholder="Pontos Importantes/Adicionais" id="ponto"
                             style="height: 150px"></textarea>
                         <label for="ponto">Informações Importantes/Adicionais</label>
                     </div>
                 </div>
-
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 ">
                     <div class="espacamentoBaixo">
                         <button onclick="formatar()" type="button" class="btn btn-success cor">Gerar
@@ -125,18 +111,14 @@
                         <button onclick="copiar()" type="button" class="btn btn-success" id="botao">Copiar</button>
                         <button onclick="limpar()" type="button" class="btn btn-success">Limpar Tela</button>
                         <button onclick="envio()" type="button" class="btn btn-success wpp"></button>
-
                     </div>
                     <div class="form-floating">
                         <textarea class="form-control" placeholder="Texto Formatado" id="segundo"
                             style="height: 400px"></textarea>
                         <label for="segundo">Texto Formatado</label>
                     </div>
-
-
                 </div>
             </div>
-
         </div>
     </form>
     <script src="js/script.js"></script>
@@ -150,8 +132,7 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
     <footer class="bg-success text-white">
-        Developed by: SGG  Version 1.0
+        Developed by: SGG      -     Version 1.0
     </footer>
 </body>
-
 </html>
