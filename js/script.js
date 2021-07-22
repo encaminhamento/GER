@@ -2,89 +2,104 @@ function formatar() {
     var encaminhamento = document.getElementById("primeiro").value;
     var importante = document.getElementById("ponto").value;
     var ReuniaoData = document.getElementById("data").value;
-    if (encaminhamento === "" & importante === "" | ReuniaoData === "") {
-        popup("Impossivel fazer formatação sem encaminhamentos ou Informações");
+    var gerencia = document.getElementById("gerencia").value;
+    var usuario = document.getElementById("NomeUsuario").value;
+    if (ReuniaoData === "" | gerencia === "" | usuario === "") {
+        popup("Algum campo obrigatorio foi deixado em branco(*)")
+
+
     }
     else {
-        document.getElementById("segundo").value = "";
-        var texto = document.getElementById("primeiro").value;
-        var vetorString = texto.split("\n");
-        var tamanho = vetorString.length;
-
-        var teste = document.querySelector('input[name="inlineRadioOptions"]:checked').value;
-
-        if (teste === "1") {
-            document.getElementById("segundo").value += "*Ponto de Controle " + document.getElementById("data").value + "*\n";
+        if (encaminhamento === "" & importante === "") {
+            popup("encaminhamentos ou Informações está vazio");
         }
         else {
-            document.getElementById("segundo").value += "*Reunião " + document.getElementById("data").value + "*\n";
-        }
+            document.getElementById("segundo").value = "";
+            var texto = document.getElementById("primeiro").value;
+            var vetorString = texto.split("\n");
+            var tamanho = vetorString.length;
 
-        if (encaminhamento !== "") {
+            var teste = document.querySelector('input[name="inlineRadioOptions"]:checked').value;
 
-            document.getElementById("segundo").value += "\n*Encaminhamentos:*\n";
-            for (var i = 0; i < tamanho; i++) {
-                var aux = vetorString[i];
-                var tamanhoAux = aux.length;
-                for (var j = 0; j < tamanhoAux; j++) {
-                    if (j === 0) {
-                        document.getElementById("segundo").value += "- ";
-                        document.getElementById("segundo").value += aux[j];
-                    }
-                    else {
-                        if (aux[j] === "#") {
-                            if (aux[j - 1] === " ") {
-                                if (aux[j - 2] === ".") {
-                                    document.getElementById("segundo").value += "*";
-                                }
-                                else {
-                                    document.getElementById("segundo").value += ". *";
+            if (teste === "1") {
+                document.getElementById("segundo").value += "*Ponto de Controle " + document.getElementById("data").value + "*\n";
+            }
+            else {
+                document.getElementById("segundo").value += "*Reunião " + document.getElementById("data").value + "*\n";
+            }
 
-                                }
+            if (encaminhamento !== "") {
+
+                document.getElementById("segundo").value += "\n*Encaminhamentos:*\n";
+                for (var i = 0; i < tamanho; i++) {
+                    var aux = vetorString[i];
+                    var posicao = aux.indexOf("#");
+                    if (posicao > -1) {
+                        if (aux[posicao - 1] === " ") {
+                            if (aux[posicao - 2] === ".") {
+                                document.getElementById("segundo").value += "- " + aux.substr(0, posicao) + "*";
                             }
                             else {
-                                if (aux[j - 1] === ".") {
-                                    document.getElementById("segundo").value += " *";
+                                document.getElementById("segundo").value += "- " + aux.substr(0, posicao - 1) + ". *";
 
-                                }
-                                else {
-                                    document.getElementById("segundo").value += ". *";
-                                }
-                            }
-                            if (aux[j + 1] === " ") {
-                                j = j + 2;
-                                document.getElementById("segundo").value += aux[j];
                             }
                         }
-
-
                         else {
+                            if (aux[posicao - 1] === ".") {
+                                document.getElementById("segundo").value += "- " + aux.substr(0, posicao) + " *";
 
-                            document.getElementById("segundo").value += aux[j];
+                            }
+                            else {
+                                document.getElementById("segundo").value += "- " + aux.substr(0, posicao) + ". *";
+                            }
                         }
+
+
+                        /////////////////////////////////////
+                        parte2 = aux.slice(posicao + 1);
+                        var posicao = parte2.indexOf("#");
+                        if (posicao > -1) {
+                            if (parte2[0] === " ") {
+                                document.getElementById("segundo").value += parte2.substr(1, posicao - 1);
+                            }
+
+                            else {
+                                document.getElementById("segundo").value += parte2.substr(0, posicao);
+                            }
+
+                            document.getElementById("segundo").value += ", Prazo: " + parte2.substr(posicao + 1) + "*";
+
+                        }
+                        else {
+                            document.getElementById("segundo").value += parte2 + "*";
+                        }
+
                     }
+                    else {
+                        document.getElementById("segundo").value += "- " + aux;
+                    }
+                    document.getElementById("segundo").value += "\n";
+
                 }
-                document.getElementById("segundo").value += "*\n";
             }
-        }
 
 
 
 
-        if (document.getElementById("ponto").value != "") {
-            document.getElementById("segundo").value += "\n*Informações Importantes:*\n";
-            texto = document.getElementById("ponto").value;
-            vetorString = texto.split("\n");
-            tamanho = vetorString.length;
-            for (var i = 0; i < tamanho; i++) {
+            if (document.getElementById("ponto").value != "") {
+                document.getElementById("segundo").value += "\n*Informações Importantes:*\n";
+                texto = document.getElementById("ponto").value;
+                vetorString = texto.split("\n");
+                tamanho = vetorString.length;
+                for (var i = 0; i < tamanho; i++) {
 
-                document.getElementById("segundo").value += "- " + vetorString[i] + "\n";
+                    document.getElementById("segundo").value += "- " + vetorString[i] + "\n";
 
+                }
             }
+
+
         }
-
-
-
     }
 }
 
@@ -97,8 +112,12 @@ function copiar() {
     const texto = document.getElementById('segundo');
     texto.select();
     document.execCommand('copy');
+    alert("Texto Copiado");
+
 }
 function limpar() {
+    document.getElementById("gerencia").value = "";
+    document.getElementById("NomeUsuario").value = "";
     document.getElementById("primeiro").value = "";
     document.getElementById("ponto").value = "";
     document.getElementById("segundo").value = "";
