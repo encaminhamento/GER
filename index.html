@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/main.css" rel="stylesheet" />
@@ -7,8 +8,10 @@
     <meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″>
     <title>SSG - ENC </title>
 </head>
+
 <body>
     <header class="cabecalho">
+
         <main>
             <div class="p-3 mb-2 bg-success text-white">
                 <img src="./img/sgg-n (1).png" class="img-fluid rounded float-start " alt="...">
@@ -21,13 +24,14 @@
             </div>
         </main>
     </header>
-    <form class="form">
+    <form class="form ">
         <div class="container teste">
             <div class="row ">
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                     <div class="row g-2">
                         <div class="form-floating col-md-4">
-                            <select class="form-select  " aria-label=".form-select-sm example" id="gerencia">
+                            <select onchange="habilita(), MudaSelect()" class="form-select  "
+                                aria-label=".form-select-sm example" id="gerencia">
                                 <option value="" selected hidden>--Selecione--</option>
                                 <option value="1">GMPG</option>
                                 <option value="2">GMPS</option>
@@ -36,7 +40,8 @@
                             <label for="floatingSelectGrid">Gerencia(*)</label>
                         </div>
                         <div class="form-floating col-md-4 espacamentoBaixo">
-                            <input class="form-control" type="text" placeholder="Nome" id="NomeUsuario"></input>
+                            <input class="form-control" type="text" placeholder="Nome" id="NomeUsuario"
+                                disabled></input>
                             <label for="floatingTextarea2">Digite seu nome(*)</label>
                         </div>
                         <div class="col-md-4">
@@ -61,8 +66,8 @@
                         <div class="col-md">
                             <div class="form-floating">
                                 <select onchange="escreve(), datas()" class="form-select  "
-                                    aria-label=".form-select-sm example" id="reuniao">
-                                    <option value="" selected hidden>--Selecione o Projeto(*)--</option>
+                                    aria-label=".form-select-sm example" id="reuniao" disabled>
+                                    <option value="" selected hidden>--Selecione o Projeto--</option>
                                     <option value="Agricultura do futuro+5G">Agricultura do futuro+5G</option>
                                     <option value="Cidades inteligentes">Cidades inteligentes</option>
                                     <option value="Convênio">Convênio</option>
@@ -82,39 +87,41 @@
                                     <option value="Zoox">Zoox</option>
                                     <option value="1">Outra</option>
                                 </select>
-                                <label for="floatingSelectGrid">Projetos</label>
+                                <label for="floatingSelectGrid">Projetos(*)</label>
                             </div>
                         </div>
                         <div class="col-md">
                             <div class="form-floating">
                                 <input class="form-control" type="text" aria-label=".form-control-lg example"
-                                    placeholder="Projeto - Data" id="data">
+                                    placeholder="Projeto - Data" id="data" disabled>
                                 <label for="floatingInputGrid">Projeto - Data</label>
                             </div>
                         </div>
                     </div>
                     <div class="form-floating espacamentoAlto">
                         <textarea class="form-control" placeholder="ENCAMINHAMENTOS. # RESPONSAVEL, DATA" id="primeiro"
-                            style="height: 150px"></textarea>
+                            style="height: 150px; resize: none" disabled></textarea>
                         <label for="primeiro">Ação#Responsavel#Prazo</label>
                     </div>
                     <div class="espacamento form-floating">
                         <textarea class="form-control" placeholder="Pontos Importantes/Adicionais" id="ponto"
-                            style="height: 150px"></textarea>
+                            style="height: 150px; resize: none" disabled></textarea>
                         <label for="ponto">Informações Importantes/Adicionais</label>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 ">
                     <div class="espacamentoBaixo">
-                        <button onclick="formatar()" type="button" class="btn btn-success cor">Gerar
+                        <button onclick="formatar()" type="button" class="btn btn-success cor espacamentoBaixo">Gerar
                             Encaminhamento</button>
-                        <button onclick="copiar()" type="button" class="btn btn-success" id="botao">Copiar</button>
-                        <button onclick="limpar()" type="button" class="btn btn-success">Limpar Tela</button>
-                        <button onclick="envio()" type="button" class="btn btn-success wpp"></button>
+                        <button onclick="copiar()" type="button" class="btn btn-success espacamentoBaixo"
+                            id="botao">Copiar</button>
+                        <button onclick="limpar()" type="button" class="btn btn-success espacamentoBaixo">Limpar
+                            Tela</button>
+                        <button onclick="envio()" type="button" class="btn btn-success wpp espacamentoBaixo"></button>
                     </div>
                     <div class="form-floating">
                         <textarea class="form-control" placeholder="Texto Formatado" id="segundo"
-                            style="height: 400px"></textarea>
+                            style="height: 390px; resize: none" disabled></textarea>
                         <label for="segundo">Texto Formatado</label>
                     </div>
                 </div>
@@ -131,8 +138,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
-    <footer class="bg-success text-white">
-        Developed by: SGG      -     Version 1.0
+    <footer class="p-2 bg-success text-white fixed-bottom text-center">
+        Developed by: SGG - Version 1.0
     </footer>
 </body>
+
 </html>

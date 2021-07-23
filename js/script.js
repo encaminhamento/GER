@@ -3,6 +3,9 @@ function formatar() {
     var importante = document.getElementById("ponto").value;
     var ReuniaoData = document.getElementById("data").value;
     var gerencia = document.getElementById("gerencia").value;
+
+
+
     var usuario = document.getElementById("NomeUsuario").value;
     if (ReuniaoData === "" | gerencia === "" | usuario === "") {
         popup("Algum campo obrigatorio foi deixado em branco(*)")
@@ -67,7 +70,7 @@ function formatar() {
                                 document.getElementById("segundo").value += parte2.substr(0, posicao);
                             }
 
-                            document.getElementById("segundo").value += ", Prazo: " + parte2.substr(posicao + 1) + "*";
+                            document.getElementById("segundo").value += ". Prazo: " + parte2.substr(posicao + 1) + "*";
 
                         }
                         else {
@@ -123,6 +126,16 @@ function limpar() {
     document.getElementById("segundo").value = "";
     document.getElementById("data").value = "";
     document.getElementById("reuniao").value = "";
+
+    document.getElementById("NomeUsuario").disabled = true;
+    document.getElementById("reuniao").disabled = true;
+    document.getElementById("data").disabled = true;
+    document.getElementById("primeiro").disabled = true;
+    document.getElementById("ponto").disabled = true;
+    document.getElementById("segundo").disabled = true;
+
+
+
 }
 
 function datas() {
@@ -135,6 +148,8 @@ function datas() {
 
 function escreve() {
     var texto = document.getElementById("reuniao").value;
+
+
     if (texto === '1') {
         document.getElementById("data").value = '';
     }
@@ -146,7 +161,6 @@ function escreve() {
 
 function envio() {
 
-
     var texto = document.getElementById("segundo").value;
     if (texto === "") {
         popup("ERRO, 'Texto Formatado' encontra-se em branco");
@@ -156,7 +170,16 @@ function envio() {
         window.open("https://api.whatsapp.com/send?1=pt_BR&text=" + texto, "_blank");
     }
 
+}
 
+function habilita() {
+    document.getElementById("NomeUsuario").disabled = false;
+    document.getElementById("reuniao").disabled = false;
+    document.getElementById("data").disabled = false;
+    document.getElementById("primeiro").disabled = false;
+    document.getElementById("ponto").disabled = false;
+    document.getElementById("segundo").disabled = false;
 
 
 }
+
