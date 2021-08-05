@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html>
-    <!-- Projeto – Gestão de encaminhamento gerencial
+<!-- Projeto – Gestão de encaminhamento gerencial
     Desenvolvimento: SGG
     Ultima Atualização 05/08/2021
     Desenvolvedores: Leonardo, Marcia, Ruan, Eduardo
     Versão 1.0  -->
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/main.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!--Folha de estilo do seletor de emoji-->
     <link href="css/emoji.css" rel="stylesheet">
     <meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″>
+    <!-- Titulo do site que ira aparecer na aba -->
     <title>SSG - ENC </title>
 </head>
+
 <body>
+    <!-- cabeçalho do site -->
     <header class="cabecalho ">
         <main>
-            <img src="./img/sgg-n (1).png" class="img-fluid rounded float-start ">
-            <div class="p-3 mb-2 bg-success text-white ">
+            <!-- Imagem logo -->
+            <img src="./img/sgg-n (1).png" class="img-fluid rounded float-start">
+            <!-- cor, tamanho e tipo (bootstrap) -->
+            <div class="p-3 mb-2 bg-success text-white">
+                <!-- Titulo do site -->
                 <figure class="text-center">
-                    <blockquote class="blockquote">
+                    <blockquote class="blockquote  ">
                         <h2>Gestão de Encaminhamento Gerencial</h2>
                     </blockquote>
                 </figure>
@@ -50,7 +58,7 @@
                             <label for="floatingTextarea2">Digite seu nome(*)</label>
                         </div>
                         <div class="col-md-4">
-                            <legend class="col-form-label  pt-0">Ponto de Controle:</legend>
+                            <legend class="col-form-label  pt-0">Ponto de Controle?</legend>
                             <div class="form-check form-check-inline espacamentoEsq espacamentoPonto">
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
                                     value="1" checked>
@@ -86,8 +94,9 @@
                         </div>
                     </div>
                     <div class="form-floating espacamentoAlto">
-                        <textarea class="form-control" placeholder="ENCAMINHAMENTOS. # RESPONSAVEL, DATA" id="primeiro" style="height: 150px; resize: none" data-emojiable="true"  disabled></textarea>
-                        <label for="primeiro">Ação#Responsavel#Prazo</label>   
+                        <textarea class="form-control" placeholder="Ação#Responsável#Prazo" id="primeiro"
+                            style="height: 150px; resize: none" disabled></textarea>
+                        <label for="primeiro">Ação#Responsável#Prazo</label>
                     </div>
                     <div class="espacamento form-floating">
                         <textarea class="form-control" placeholder="Pontos Importantes/Adicionais" id="ponto"
@@ -97,13 +106,17 @@
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 ">
                     <div class="espacamentoBaixo">
-                        <button onclick="formatar()" type="button" class="btn btn-success cor espacamentoBaixo">Gerar Encaminhamento</button>
-                        <button onclick="copiar()" type="button" class="btn btn-success espacamentoBaixo" id="botao">Copiar</button>
-                        <button onclick="limpar()" type="button" class="btn btn-success espacamentoBaixo">Limpar Tela</button>
+                        <button onclick="formatar()" type="button" class="btn btn-success cor espacamentoBaixo">Gerar
+                            Encaminhamento</button>
+                        <button onclick="copiar()" type="button" class="btn btn-success espacamentoBaixo"
+                            id="botao">Copiar</button>
+                        <button onclick="limpar()" type="button" class="btn btn-success espacamentoBaixo">Limpar
+                            Tela</button>
                         <button onclick="envio()" type="button" class="btn btn-success wpp espacamentoBaixo"></button>
                     </div>
                     <div class="form-floating">
-                        <textarea class="form-control" placeholder="Texto Formatado" id="segundo" style="height: 390px; resize: none" disabled></textarea>
+                        <textarea class="form-control" placeholder="Texto Formatado" id="segundo"
+                            style="height: 390px; resize: none" disabled></textarea>
                         <label for="segundo">Texto Formatado</label>
                     </div>
                 </div>
@@ -111,11 +124,17 @@
         </div>
     </form>
     <script src="js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script srs= "https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.js"></script>
+    <script srs="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.js"></script>
     <!--Inicio do seletor de emoji em JavaScript-->
     <script src="js/config.js"></script>
     <script src="js/util.js"></script>
@@ -123,7 +142,7 @@
     <script src="js/emoji-picker.js"></script>
     <!--Fim do seletor de emoji JavaScript-->
     <script>
-        $(function() {
+        $(function () {
             // Inicializa e cria um conjunto de emojis a partir da folha de sprite
             window.emojiPicker = new EmojiPicker({
                 emojiable_selector: '[data-emojiable=true]',
@@ -137,8 +156,9 @@
         });
     </script>
     <!--RODAPÉ-->
-    <footer class="p-2 bg-success text-white fixed-bottom">
+    <footer class="p-2 bg-success text-white fixed-bottom text-center">
         Developed by: SGG - Version 1.0
     </footer>
 </body>
+
 </html>
