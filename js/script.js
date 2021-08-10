@@ -226,6 +226,10 @@ function MudaSelect() {//troca os projetos de acordo com a gerencia
         option5.value = "5";
         option5.text = "ERP";
 
+        var option19 = document.createElement('option');
+        option19.value = "19";
+        option19.text = "E-Bus";
+
         var option6 = document.createElement('option');
         option6.value = "6";
         option6.text = "Expresso";
@@ -285,6 +289,7 @@ function MudaSelect() {//troca os projetos de acordo com a gerencia
         selectSetor.add(option3);
         selectSetor.add(option4);
         selectSetor.add(option5);
+        selectSetor.add(option19);
         selectSetor.add(option6);
         selectSetor.add(option7);
         selectSetor.add(option8);
