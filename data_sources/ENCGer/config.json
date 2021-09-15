@@ -1,0 +1,10 @@
+{
+    "name": "ENCGer",
+    "type": "mongodb-atlas",
+    "config": {
+        "clusterName": "ENCGer",
+        "readPreference": "primary",
+        "wireProtocolEnabled": true
+    },
+    "version": 1
+}

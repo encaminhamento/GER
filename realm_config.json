@@ -1,0 +1,7 @@
+{
+    "app_id": "encger-dynea",
+    "config_version": 20210101,
+    "name": "ENCGer",
+    "location": "US-VA",
+    "deployment_model": "LOCAL"
+}
