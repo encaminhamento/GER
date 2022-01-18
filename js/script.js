@@ -206,6 +206,10 @@ function MudaSelect() {//troca os projetos de acordo com a gerencia
         inicial.value = "";
         inicial.text = "--Selecione o Projeto--";
 
+        var option20 = document.createElement('option');
+        option20.value = "20";
+        option20.text = "ABEP-TIC";
+
         var option = document.createElement('option');
         option.value = "1";
         option.text = "Agricultura do futuro+5G";
@@ -284,6 +288,7 @@ function MudaSelect() {//troca os projetos de acordo com a gerencia
 
 
         selectSetor.add(inicial);
+        selectSetor.add(option20);
         selectSetor.add(option);
         selectSetor.add(option2);
         selectSetor.add(option3);
