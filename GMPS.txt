@@ -1,12 +1,17 @@
-Agrodefesa
-CBM
-DETRAN
+Biodigestor CEASA
+CASEs
+Celas Modulares
+Chefatura de Polícia
+Contratação O.S
 DGAP
-FAOEG
+Escolas Padrão Século XXI
 GOIAS TURISMO
-OVG
-PC
-PM
+Hospital Veterinário
+Juntos pelo Araguaia
+Leitura Todo Dia
+Reforma Basileu - 2 Etapa
+Regionalização da Saúde
+Revitalização Casa do Idoso
 SEAPA
 SECULT
 SEDS
@@ -15,5 +20,4 @@ SEEL
 SEMAD
 SES
 SSP
-UEG
 Outra
