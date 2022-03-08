@@ -199,139 +199,57 @@ function MudaSelect() {//troca os projetos de acordo com a gerencia
         selectSetor.remove(i);
     }
 
-
+    var inicial = document.createElement('option');
+    inicial.value = "";
+    inicial.text = "--Selecione o Projeto--";
+    selectSetor.add(inicial);
     if (value == '1') {
 
-        var inicial = document.createElement('option');
-        inicial.value = "";
-        inicial.text = "--Selecione o Projeto--";
-
-        var option20 = document.createElement('option');
-        option20.value = "20";
-        option20.text = "ABEP-TIC";
-
-        var option = document.createElement('option');
-        option.value = "1";
-        option.text = "Agricultura do futuro+5G";
-
-        var option2 = document.createElement('option');
-        option2.value = "2";
-        option2.text = "Cidades inteligentes";
-
-        var option3 = document.createElement('option');
-        option3.value = "3";
-        option3.text = "Convênio";
-
-        var option4 = document.createElement('option');
-        option4.value = "4";
-        option4.text = "Detran";
-
-        var option5 = document.createElement('option');
-        option5.value = "5";
-        option5.text = "ERP";
-
-        var option19 = document.createElement('option');
-        option19.value = "19";
-        option19.text = "E-Bus";
-
-        var option6 = document.createElement('option');
-        option6.value = "6";
-        option6.text = "Expresso";
-
-        var option7 = document.createElement('option');
-        option7.value = "7";
-        option7.text = "Gomapp";
-
-        var option8 = document.createElement('option');
-        option8.value = "8";
-        option8.text = "Monitora";
-
-        var option9 = document.createElement('option');
-        option9.value = "9";
-        option9.text = "Musical";
-
-        var option10 = document.createElement('option');
-        option10.value = "10";
-        option10.text = "Orquestra";
-
-        var option11 = document.createElement('option');
-        option11.value = "11";
-        option11.text = "Painéis Bi";
-
-        var option12 = document.createElement('option');
-        option12.value = "12";
-        option12.text = "Reforma basileu";
-
-        var option13 = document.createElement('option');
-        option13.value = "13";
-        option13.text = "SEDI";
-
-        var option14 = document.createElement('option');
-        option14.value = "14";
-        option14.text = "Telas";
-
-        var option15 = document.createElement('option');
-        option15.value = "15";
-        option15.text = "Vacina";
-
-        var option16 = document.createElement('option');
-        option16.value = "16";
-        option16.text = "Vapt-Vupt";
-
-        var option17 = document.createElement('option');
-        option17.value = "17";
-        option17.text = "Zoox";
-
-        var option18 = document.createElement('option');
-        option18.value = "18";
-        option18.text = "Outra";
+        fetch('GMPG.txt')
+            .then(response => response.text())
+            .then(text => {
+                const array = text.split("\r\n");
+                const Select = document.getElementById("reuniao");
+                array.forEach((array) => {
+                    option = new Option(array, array);
+                    Select.options[Select.options.length] = option;
+                })
 
 
-        selectSetor.add(inicial);
-        selectSetor.add(option20);
-        selectSetor.add(option);
-        selectSetor.add(option2);
-        selectSetor.add(option3);
-        selectSetor.add(option4);
-        selectSetor.add(option5);
-        selectSetor.add(option19);
-        selectSetor.add(option6);
-        selectSetor.add(option7);
-        selectSetor.add(option8);
-        selectSetor.add(option9);
-        selectSetor.add(option10);
-        selectSetor.add(option11);
-        selectSetor.add(option12);
-        selectSetor.add(option13);
-        selectSetor.add(option14);
-        selectSetor.add(option15);
-        selectSetor.add(option16);
-        selectSetor.add(option17);
-        selectSetor.add(option18);
-
-
-
+            });
 
     }
 
     if (value == '2') {
 
-        var option3 = document.createElement('option');
-        option3.value = '1';
-        option3.text = 'SEM OPÇÕES';
+        fetch('GMPS.txt')
+            .then(response => response.text())
+            .then(text => {
+                const array = text.split("\r\n");
+                const Select = document.getElementById("reuniao");
+                array.forEach((array) => {
+                    option = new Option(array, array);
+                    Select.options[Select.options.length] = option;
+                })
 
 
-        selectSetor.add(option3);
-
+            });
     }
 
     if (value == '3') {
 
-        var option5 = document.createElement('option');
-        option5.value = '1';
-        option5.text = 'SEM OPÇÕES';
+        fetch('GEMPIDE.txt')
+            .then(response => response.text())
+            .then(text => {
+                const array = text.split("\r\n");
+                const Select = document.getElementById("reuniao");
+                array.forEach((array) => {
+                    option = new Option(array, array);
+                    Select.options[Select.options.length] = option;
+                })
 
-        selectSetor.add(option5);
+
+            });
 
     }
 

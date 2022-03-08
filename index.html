@@ -13,9 +13,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <!--Folha de estilo do seletor de emoji-->
-    <link href="css/emoji.css" rel="stylesheet">
-    <meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″>
+
     <!-- Titulo do site que ira aparecer na aba -->
     <title>SSG - ENC </title>
 </head>
@@ -134,27 +132,9 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script srs="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.js"></script>
-    <!--Inicio do seletor de emoji em JavaScript-->
-    <script src="js/config.js"></script>
-    <script src="js/util.js"></script>
-    <script src="js/jquery.emojiarea.js"></script>
-    <script src="js/emoji-picker.js"></script>
-    <!--Fim do seletor de emoji JavaScript-->
-    <script>
-        $(function () {
-            // Inicializa e cria um conjunto de emojis a partir da folha de sprite
-            window.emojiPicker = new EmojiPicker({
-                emojiable_selector: '[data-emojiable=true]',
-                assetsPath: 'img/',
-                popupButtonClasses: 'fa fa-smile-o',
-            });
-            // Encontra todos os elementos com 'emojiable_selector' e os converte em campos de entrada de emoji ricos
-            // Você pode querer atrasar esta etapa se tiver criado campos de entrada dinamicamente que aparecem mais tarde no processo de carregamento
-            // Pode ser chamado quantas vezes forem necessárias; campos de entrada convertidos anteriormente não serão convertidos novamente
-            window.emojiPicker.discover();
-        });
-    </script>
+
+
+
     <!--RODAPÉ-->
     <footer class="p-2 bg-success text-white fixed-bottom text-center">
         Developed by: SGG - Version 1.0
