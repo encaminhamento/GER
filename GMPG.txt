@@ -6,6 +6,7 @@ Convênio
 Detran
 ERP
 E-Bus
+Enel-X
 Expresso
 Gomapp
 Monitora
